@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        
+            #click {
+                text-decoration: none;
+                border: solid 3px plum;
+                background-color: #f8d4e2;
+                text-align: center;
+
+            }
+            #click li{
+                display: inline ;
+
+            }
+            
+            #click a{    
+                text-decoration: none;
+                color:rgb(239, 9, 113);
+                font-weight: bold;
+                padding: 10px 15px;
+                
+            }
+            #click a:visited {
+                color: rgb(72, 5, 68); 
+            }
+
+            #click a:hover {
+                color: #a075e6;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            #click a:active {
+                color: #ed0909;
+            }
+            *{
+                margin:0;
+                padding:0;
+            }
+            #info{
+                font-weight: bold;
+                font-size: 50;
+                color: crimson;
+                border:dashed 3px #000000;
+            }
+            .menu_box{
+                display: inline-block;
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                border: solid 3px #000000;
+                border-radius: 15px;
+            }
+            .map_box{
+                width: 300px;
+                height: 304px;
+                background-color: #eeeeee;
+                border: solid 1px #aaaaaa;
+                border-radius: 15px; 
+                box-shadow: 6px 6px 5px #888888;
+                text-align: center;
+            }
+            #position{
+                width: 500px;
+                padding: 10px;
+                background-color: #eeeeee;
+                border:solid 1px #aaaaaa;
+                text-align: center;
+            }
+            h3{
+                color: palevioletred;
+            }
+            img{
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="click">
+            <li><a href="book_banner1.html">책/배너 페이지</a></li>
+            <li><a href="boxes.html">박스 설정 페이지</a></li>
+            <li><a href="inline_block.html">인라인 블락 설정 페이지</a></li>
+            <li><a href="index.html">메인페이지</a></li>
+            <li><a href="v_menu.html">수직방향 메뉴 페이지</a></li>
+        </ul>
+        <p><img src="다운로드 (3).jpg" width="1500"></p>
+        <h1>위키위티 디저트 카페</h1><br>
+        
+        <h3>1. CAFE INFO</h3><br>
+        <h2 id="info">"맛있는 디저트와 예쁜 인테리어의 조화"<br>달콤한 디저트 한 입,
+            예쁜 공간 속에 머무는 작은 여유.
+            입안은 행복으로, 마음은 따뜻함으로 채워지는 시간. </h2><br>
+        <h3>2. MENU</h3><br>
+        <div class="menu_box"><img src="다운로드 (4).jpg" width="200" height="100"><h4>생딸기 미니 케이크</h4><h5>부드러운제누아즈 시트와 동물성휘핑크림을 사용한 깊은 맛의 케이크</h5>
+        </div>
+        <div class="menu_box"><img src="다운로드 (5).jpg" width="200" height="100"><h4>다크초코 스모어 쿠키</h4><h5>진한 다크초콜릿 쿠키 속에 마시멜로와 크래커가 가득</h5></div>
+        <div class="menu_box"><img src="다운로드 (6).jpg" width="200" height="100"><h4>쫀득 쿠키</h4><h5>겉은 바삭, 속은 촉촉하게 쫀득한 식감이 매력적인 쿠키.</h5></div>
+        <br><br>
+        <h3>3. POSITION</h3><br>
+        <div class="map_box"><img src="map.png"></div><br>
+        <h4 id="position">경기 군포시 산본로323번길 16-30 5층 502호, 503호</h4>
+
+    </body>
+    </html>
