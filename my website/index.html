@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skateboard Web Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', '맑은 고딕', sans-serif;
+      background-color: #f2f0f0;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header .logo img {
+      height: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+    .banner img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 4px solid #ccc;
+    }
+    .description {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 20px;
+      background-color: #ffffff;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-weight: 500;
+    }
+    .three-columns {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px 60px;
+    }
+    .icon-box {
+      background-color: #ffffff;
+      padding: 30px;
+      flex: 1 1 200px;
+      max-width: 220px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .icon-box:hover {
+      transform: translateY(-5px);
+    }
+    .icon-box h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .icon-box p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logo.jpg" alt="로고"></div>
+    <nav>
+      <a href="sub1.html">보드란?</a>
+      <a href="sub2.html">보드종류</a>
+      <a href="sub3.html">기초트릭</a>
+      <a href="sub4.html">스팟추천</a>
+      <a href="sub5.html">브랜드</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <img src="banner.jpg" alt="메인 배너">
+  </div>
+
+  <div class="description">
+    BOARD; 누구에게는 취미, 누군가에게는 일, 누군가에게는 패션
+  </div>
+
+  <div class="three-columns">
+    <a href="sub1.html" class="icon-box">
+      <h3>보드란?</h3>
+      <p>보드의 기본 구조와 정의를 배워보세요.</p>
+    </a>
+    <a href="sub2.html" class="icon-box">
+      <h3>보드종류</h3>
+      <p>스트릿, 롱보드, 크루저 등 다양한 종류 소개.</p>
+    </a>
+    <a href="sub3.html" class="icon-box">
+      <h3>기초트릭</h3>
+      <p>올리, 킥플립 등 기본 트릭 연습 가이드.</p>
+    </a>
+    <a href="sub4.html" class="icon-box">
+      <h3>스팟추천</h3>
+      <p>국내 보드 타기 좋은 장소를 모았습니다.</p>
+    </a>
+    <a href="sub5.html" class="icon-box">
+      <h3>브랜드</h3>
+      <p>SUPREME, LABROS 등 인기 브랜드 소개.</p>
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Skateboard Website | 202435178 이윤호
+  </footer>
+</body>
+</html>

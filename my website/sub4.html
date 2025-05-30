@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스팟 추천</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', '맑은 고딕', sans-serif;
+      background-color: #f2f0f0;
+      color: #222;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .spot-box {
+      background-color: #eef;
+      border-left: 5px solid #3366cc;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .spot-box:hover {
+      background-color: #dde5ff;
+    }
+    .spot-box h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .spot-box p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      z-index: 1000;
+      width: 600px;
+      max-width: 90%;
+    }
+    .popup img {
+  width: 50%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+    .popup button {
+      margin-top: 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><img src="logo.jpg" alt=""></div>
+    <nav>
+      <a href="index.html">메인</a>
+      <a href="sub1.html">보드란?</a>
+      <a href="sub2.html">보드종류</a>
+      <a href="sub3.html">기초트릭</a>
+      <a href="sub4.html">스팟추천</a>
+      <a href="sub5.html">브랜드</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>국내 추천 스케이트보드 스팟</h2>
+
+    <div class="spot-box" onclick="showSpot('서울 보광동 스팟', '계단과 경사면이 잘 갖춰진 헬플레이스. 스케이터들 사이에서 성지로 불리는 명소입니다. 다양한 난이도의 지형이 함께 존재하여 중급 이상 라이더에게 추천되며, 인근 카페 거리와의 접근성도 뛰어나 일상 속에서 쉽게 방문할 수 있는 도심형 스팟입니다.', 'spot1.jpg')">
+      <h3>서울 보광동 스팟</h3>
+      <p>계단과 경사면이 잘 갖춰진 헬플레이스</p>
+    </div>
+
+    <div class="spot-box" onclick="showSpot('부산 광안리 스팟', '바닷가 근처에서 트릭과 라이딩을 동시에 즐길 수 있는 독특한 환경의 보드 스팟입니다. 평탄한 보도블럭과 넓은 공간, 야간 조명 시설이 잘 갖춰져 있어 초보자부터 상급자까지 즐기기에 좋습니다. 해변 풍경과 보딩을 함께 즐기고 싶다면 추천되는 명소입니다.', 'spot2.jpg')">
+      <h3>부산 광안리 스팟</h3>
+      <p>바닷가 근처에서 트릭과 라이딩을 동시에!</p>
+    </div>
+
+    <div class="spot-box" onclick="showSpot('대전 은행동 스팟', '광장식 구조로 넓은 평면과 낮은 난간이 배치되어 있어 다양한 기술 연습에 적합한 공간입니다. 특히 낮은 난간과 계단이 잘 정비되어 있어 올리, 킥플립, 그라인드 연습에 최적화되어 있으며, 인근에 사람들이 많지 않아 부담 없이 연습할 수 있습니다.', 'spot3.jpg')">
+      <h3>대전 은행동 스팟</h3>
+      <p>광장식 낮은 난간이 많은 연습 장소</p>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+  <div class="popup" id="popup">
+    <h3 id="popupTitle"></h3>
+    <p id="popupText"></p>
+    <img id="popupImg" src="" alt="spot image">
+    <button onclick="closePopup()">닫기</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Skateboard Web Site | 202435178 이윤호
+  </footer>
+
+  <script>
+    function showSpot(title, text, img) {
+      document.getElementById('popupTitle').innerText = title;
+      document.getElementById('popupText').innerText = text;
+      document.getElementById('popupImg').src = img;
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
